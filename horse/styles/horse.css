@@ -1,0 +1,189 @@
+                                            * {
+                                                margin: 0;
+                                                padding: 0;
+                                                box-sizing: border-box;
+                                            }
+                                            
+                                            .container {
+                                                width: 100vw;
+                                                height: 100vh;
+                                                display: flex;
+                                                align-self: center;
+                                                position: relative;
+                                                background-image: linear-gradient(to bottom, black, red);
+                                            }
+                                            
+                                            .horse {
+                                                z-index: 1000;
+                                                width: 500px;
+                                                height: 100vh;
+                                                margin: auto;
+                                            }
+                                            
+                                            #ani {
+                                                animation: ani 1s infinite;
+                                            }
+                                            
+                                            @keyframes ani {
+                                                50% {
+                                                    transform: rotate(-2deg);
+                                                }
+                                            }
+                                            
+                                            #head {
+                                                animation: head 1s infinite;
+                                                animation-direction: alternate;
+                                            }
+                                            
+                                            @keyframes head {
+                                                0% {
+                                                    transform: skewX(-5deg);
+                                                }
+                                                50% {
+                                                    transform: skewX(5deg) rotate(-2deg);
+                                                }
+                                                100% {
+                                                    transform: skewX(-5deg);
+                                                }
+                                            }
+                                            
+                                            #left {
+                                                animation: leg 1s infinite;
+                                                animation-direction: alternate;
+                                            }
+                                            
+                                            #right {
+                                                animation: leg 1s infinite;
+                                                animation-direction: alternate-reverse;
+                                            }
+                                            
+                                            @keyframes leg {
+                                                25% {
+                                                    transform: skewX(-1deg) translateY(-50px);
+                                                }
+                                                75% {
+                                                    transform: skewX(1deg) translateY(-20px);
+                                                }
+                                            }
+                                            
+                                            .mo-fire {
+                                                width: 300px;
+                                                height: 300px;
+                                                position: absolute;
+                                                left: 40%;
+                                                z-index: 1;
+                                            }
+                                            
+                                            .mo-fire svg {
+                                                width: 100%;
+                                                height: auto;
+                                                position: relative
+                                            }
+                                            
+                                            .mo-fire:nth-child(2) {
+                                                left: 25%;
+                                            }
+                                            
+                                            .mo-fire:nth-child(3) {
+                                                left: 30%;
+                                            }
+                                            
+                                            .mo-fire:nth-child(4) {
+                                                left: 20%;
+                                                top: 10%;
+                                            }
+                                            
+                                            .mo-fire:nth-child(5) {
+                                                left: 40%;
+                                                top: 10%;
+                                            }
+                                            
+                                            .mo-fire:nth-child(6) {
+                                                left: 50%;
+                                                top: 25%;
+                                            }
+                                            
+                                            .mo-fire:nth-child(7) {
+                                                left: 15%;
+                                                top: 25%;
+                                            }
+                                            
+                                            .mo-fire:nth-child(8) {
+                                                left: 10%;
+                                                top: 20%;
+                                            }
+                                            
+                                            .mo-fire:nth-child(9) {
+                                                left: 30%;
+                                                top: 20%;
+                                            }
+                                            
+                                            .flame {
+                                                animation-name: flamefly;
+                                                animation-duration: 2s;
+                                                animation-timing-function: linear;
+                                                animation-iteration-count: infinite;
+                                                opacity: 0;
+                                                transform-origin: 50% 50% 0;
+                                            }
+                                            
+                                            .flame.one {
+                                                animation-delay: 1s;
+                                                animation-duration: 3s;
+                                            }
+                                            
+                                            .flame3.two {
+                                                animation-duration: 5s;
+                                                animation-delay: 1s;
+                                            }
+                                            
+                                            .flame-main {
+                                                animation-name: flameWobble;
+                                                animation-duration: 3s;
+                                                animation-timing-function: linear;
+                                                animation-iteration-count: infinite;
+                                            }
+                                            
+                                            .flame-main.one {
+                                                animation-duration: 4s;
+                                                animation-delay: 1s;
+                                            }
+                                            
+                                            .flame-main.two {
+                                                animation-duration: 3s;
+                                                animation-delay: 2s;
+                                            }
+                                            
+                                            .flame-main.three {
+                                                animation-duration: 2.1s;
+                                                animation-delay: 3s;
+                                            }
+                                            
+                                            .flame-main.four {
+                                                animation-duration: 3.2s;
+                                                animation-delay: 4s;
+                                            }
+                                            
+                                            .flame-main.five {
+                                                animation-duration: 2.5s;
+                                                animation-delay: 5s;
+                                            }
+                                            
+                                            @keyframes flameWobble {
+                                                50% {
+                                                    transform: scale(1, 1.2) translate(0, -30px) rotate(-2deg);
+                                                }
+                                            }
+                                            
+                                            @keyframes flamefly {
+                                                0% {
+                                                    transform: translate(0) rotate(180deg);
+                                                }
+                                                50% {
+                                                    opacity: 1;
+                                                }
+                                                100% {
+                                                    transform: translate(-20px, -100px) rotate(180deg);
+                                                    opacity: 0;
+                                                }
+                                            }
