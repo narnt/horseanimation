@@ -15,4 +15,4 @@ let Horse = {
     }
 }
 
-Horse.el.addEventListener('click', Horse.move);
+document.querySelector('button').addEventListener('click', Horse.move);

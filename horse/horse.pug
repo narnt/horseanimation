@@ -32,12 +32,28 @@ html(lang="en")
             +fire
             +fire
             svg.horse
-                circle(cx="200" cy="280" r="120" fill="#600")
+                g#cc                   
+                    g#left
+                        rect(x="100" y="330" width="60" height="250" fill="#600")
+                            animate(attributeName="fill" from="#600" to="#006400" dur="3s" begin="circ.begin" fill="remove")
+                        path.cop(d="M100,570 Q80,600 130,600 T160,571" stroke="red" stroke-width="3")
+                    g#right
+                        rect(x="240" y="330" width="60" height="250" fill="#600")
+                            animate(attributeName="fill" from="#600" to="#006400" dur="3s" begin="circ.begin" fill="remove")
+                        path.cop(d="M240,570 Q220,600 270,600 T300,571" stroke="red" stroke-width="3")
+                    circle(cx="200" cy="280" r="120" fill="#600")
+                        animate(attributeName="fill" from="#600" to="#008000" dur="3s" begin="click" fill="remove" id="circ")
                 g#head
                     polygon(points="102,135 115,5 225,135" fill="#600")
+                        animate(attributeName="fill" from="#600" to="#32CD32" dur="3s" begin="circ.begin" fill="remove")
+                        animate(attributeName="points" from="102,135 115,5 225,135" to="102,135 115,50 225,135" dur="1.5s" begin="circ.begin" fill="remove" id="earleft")
                     polygon(points="185,135 287,5 298,135" fill="#600" stroke="#F30" stroke-dasharray="110 120" stroke-dashoffset="60")
-                    circle(cx="200" cy="150" r="100" stroke="#F30" stroke-dasharray="200 250" stroke-dashoffset="-0" fill="#600")
+                        animate(attributeName="fill" from="#600" to="#32CD32" dur="3s" begin="circ.begin" fill="remove")
+                        animate(attributeName="points" from="185,135 287,5 298,135" to="185,135 287,50 298,135" dur="1.5s" begin="earleft.begin + 1.5s" fill="remove")
+                    circle(cx="200" cy="150" r="100" stroke="#F30" stroke-dasharray="200 250" fill="#600")
+                        animate(attributeName="fill" from="#600" to="#32CD32" dur="3s" begin="circ.begin" fill="remove")
                     circle(cx="200" cy="250" r="50" stroke="#F30" stroke-dasharray="150 210" stroke-dashoffset="60" fill="#600")
+                        animate(attributeName="fill" from="#600" to="#32CD32" dur="3s" begin="circ.begin" fill="remove")
                     circle(cx="250" cy="150" r="10" fill="#F30")
                     circle(cx="150" cy="150" r="10" fill="#F30")
                     circle(cx="180" cy="250" r="5")
@@ -48,10 +64,5 @@ html(lang="en")
                         path(d="M150 60 C 100 70, 180 10, 250 110" fill="#F30" stroke="red" stroke-width="3")
                         path(d="M170 60 C 100 70, 200 10, 280 110" fill="#F30" stroke="red" stroke-width="3")
                         path(d="M190 60 C 100 70, 230 5, 300 110" fill="#F30" stroke="red" stroke-width="3")
-                g#left
-                    rect(x="100" y="330" width="60" height="250" fill="#600")
-                    path.cop(d="M100,570 Q80,600 130,600 T160,571" stroke="red" stroke-width="3")       
-                g#right
-                    rect(x="240" y="330" width="60" height="250" fill="#600")
-                    path.cop(d="M240,570 Q220,600 270,600 T300,571" stroke="red" stroke-width="3")
+        button click
         script(src="scripts/horse.js")
