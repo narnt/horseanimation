@@ -20,11 +20,20 @@
                                                 margin: auto;
                                             }
                                             
-                                            #ani {
-                                                animation: ani 1s infinite;
+                                            @keyframes horsee {
+                                                50% {
+                                                    transform: translateY(50px) rotate(-30deg);
+                                                }
+                                                100% {
+                                                    transform: translateY(100px) rotate(30deg);
+                                                }
                                             }
                                             
-                                            @keyframes ani {
+                                            #bang {
+                                                animation: bang 1s infinite;
+                                            }
+                                            
+                                            @keyframes bang {
                                                 50% {
                                                     transform: rotate(-2deg);
                                                 }
